@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FoodAppProject4</string>
+    <string name="email_address">Email Address</string>
+    <string name="pass_word">Pass Word</string>
+    <string name="register">Register</string>
+    <string name="dob">Dob</string>
+    <string name="gender">Gender</string>
+    <string name="phone">Phone</string>
+    <string name="loading">Loading ...</string>
+</resources>
