@@ -1,6 +1,5 @@
 package letrongnghia.aprotrain.foodappproject4.Adapter;
 
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,8 +7,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -17,7 +14,6 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 import letrongnghia.aprotrain.foodappproject4.R;
-import letrongnghia.aprotrain.foodappproject4.ShowDetailActivity;
 import letrongnghia.aprotrain.foodappproject4.database.FoodData;
 
 public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHoler> {
@@ -36,10 +32,12 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHole
         return new ViewHoler(inflate);
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull PopularAdapter.ViewHoler holder, int position) {
         holder.title.setText(popularFood.get(position).getTitle());
         holder.fee.setText(String.valueOf(popularFood.get(position).getFee()));
+
 
         int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(popularFood.get(position).getPic(), "drawable", holder.itemView.getContext().getPackageName());
 
@@ -54,15 +52,15 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHole
         return popularFood.size();
     }
 
-    public class ViewHoler extends RecyclerView.ViewHolder{
+    public class ViewHoler extends  RecyclerView.ViewHolder{
             TextView title, fee;
             ImageView pic;
-            ConstraintLayout addBtn;
+            TextView addBtn;
         public ViewHoler(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.title);
             fee = itemView.findViewById(R.id.fee);
-            pic = itemView.findViewById(R.id.pic);
+            pic = itemView.findViewById(R.id.picPopular);
             addBtn = itemView.findViewById(R.id.addBtn);
 
         }

@@ -24,12 +24,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/pic"
+        android:id="@+id/picPopular"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"
         app:srcCompat="@drawable/pop_1" />
@@ -42,9 +43,9 @@
         android:textColor="#373b54"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/pic"
+        app:layout_constraintEnd_toEndOf="@+id/picPopular"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pic" />
+        app:layout_constraintTop_toBottomOf="@+id/picPopular" />
 
     <TextView
         android:id="@+id/textView12"
@@ -71,8 +72,8 @@
         android:textColor="#ffffff"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/pic"
-        app:layout_constraintStart_toStartOf="@+id/pic"
+        app:layout_constraintEnd_toEndOf="@+id/picPopular"
+        app:layout_constraintStart_toStartOf="@+id/picPopular"
         app:layout_constraintTop_toBottomOf="@+id/fee" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

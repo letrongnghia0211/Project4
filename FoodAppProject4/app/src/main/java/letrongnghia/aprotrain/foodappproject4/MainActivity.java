@@ -66,18 +66,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void recyclerViewPopular() {
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        recyclerViewPopularList = findViewById(R.id.recyclerView2);
-
-
 
         ArrayList<FoodData> foodList = new ArrayList<>();
         foodList.add(new FoodData("Pepperoni pizza", "pizza1", "slices pepperoni, mozzerella cheese, fresh oregano, ground black pepper, pizza sauce", 9.67));
         foodList.add(new FoodData("Cheese Burger", "burger", "beef, Gouda cheese, Special sauce, Lettuce, tomato", 8.79));
         foodList.add(new FoodData("Vegetable pizza", "pizza2", "olice oil, Vegetable oil, pitted kalamata, cherry", 8.7));
+        recyclerViewPopularList = findViewById(R.id.recyclerView2);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+       recyclerViewPopularList.setLayoutManager(linearLayoutManager);
 
-        adapter2 = new PopularAdapter(foodList);
-        recyclerViewPopularList.setAdapter(adapter2);
+       adapter2 = new PopularAdapter(foodList);
+       recyclerViewPopularList.setAdapter(adapter2);
+
     }
 
     public void MainActivity(View view) {
