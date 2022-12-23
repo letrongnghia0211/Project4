@@ -13,7 +13,7 @@ import letrongnghia.aprotrain.foodappproject4.Helper.ManagementCart;
 import letrongnghia.aprotrain.foodappproject4.database.FoodData;
 
 public class ShowDetailActivity extends AppCompatActivity {
-    private TextView addtoCartBtn;
+    private TextView addToCartBtn;
     private TextView titleTxt, feeTxt, descriptionTxt, numberOrderTxt;
     private ImageView plusBtn,minusBtn, picFood;
     private FoodData object;
@@ -24,7 +24,6 @@ public class ShowDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_detail);
-
         managementCart=new ManagementCart(this);
         initView();
         getBundle();
@@ -38,7 +37,7 @@ public class ShowDetailActivity extends AppCompatActivity {
                 .into(picFood);
 
         titleTxt.setText(object.getTitle());
-        feeTxt.setText("$"+object.getFee());
+        feeTxt.setText("$" + object.getFee());
         descriptionTxt.setText(object.getDescription());
         numberOrderTxt.setText(String.valueOf(numberOrder));
 
@@ -59,7 +58,7 @@ public class ShowDetailActivity extends AppCompatActivity {
             }
         });
 
-        addtoCartBtn.setOnClickListener(new View.OnClickListener() {
+        addToCartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 object.setNumberInCart(numberOrder);
@@ -70,13 +69,13 @@ public class ShowDetailActivity extends AppCompatActivity {
 
 
     private void initView() {
-        addtoCartBtn.findViewById(R.id.addToCartBtn);
-        titleTxt.findViewById(R.id.titleTxt);
-        feeTxt.findViewById(R.id.priceTxt);
-        descriptionTxt.findViewById(R.id.descriptionTxt);
-        numberOrderTxt.findViewById(R.id.numberOrderTxt);
-        plusBtn.findViewById(R.id.plusBtn);
-        minusBtn.findViewById(R.id.minusBtn);
-        picFood.findViewById(R.id.picFood);
+        addToCartBtn=findViewById(R.id.addToCartBtn);
+        titleTxt=findViewById(R.id.titleTxt);
+        feeTxt=findViewById(R.id.priceTxt);
+        descriptionTxt=findViewById(R.id.descriptionTxt);
+        numberOrderTxt=findViewById(R.id.numberOrderTxt);
+        plusBtn=findViewById(R.id.plusBtn);
+        minusBtn=findViewById(R.id.minusBtn);
+        picFood=findViewById(R.id.picFood);
     }
 }

@@ -22,7 +22,7 @@ public class CartListActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView recyclerViewList;
     private ManagementCart managementCart;
-    TextView totalFeeTxt, taxTxt, deliveryTxt, totalTxt, emptyTxt;
+    private TextView totalFeeTxt, taxTxt, deliveryTxt, totalTxt, emptyTxt;
     private double tax;
     private ScrollView scrollView;
 
@@ -61,7 +61,7 @@ public class CartListActivity extends AppCompatActivity {
     private void initView() {
         recyclerViewList = findViewById(R.id.recyclerView);
         totalFeeTxt = findViewById(R.id.totalFeeTxt);
-        taxTxt = findViewById(R.id.deliveryTxt);
+        taxTxt = findViewById(R.id.taxTxt);
         deliveryTxt = findViewById(R.id.deliveryTxt);
         totalTxt = findViewById(R.id.totalTxt);
         emptyTxt = findViewById(R.id.emptyTxt);

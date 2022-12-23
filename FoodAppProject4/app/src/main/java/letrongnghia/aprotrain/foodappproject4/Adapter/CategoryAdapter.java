@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import letrongnghia.aprotrain.foodappproject4.R;
 import letrongnghia.aprotrain.foodappproject4.database.CategoryData;
 
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHoler> {
+public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
     ArrayList<CategoryData> categoryData;
 
 
@@ -28,13 +28,13 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     }
 
     @Override
-    public ViewHoler onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_category,parent,false);
-        return new ViewHoler(inflate);
+        return new ViewHolder(inflate);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CategoryAdapter.ViewHoler holder, int position) {
+    public void onBindViewHolder(@NonNull CategoryAdapter.ViewHolder holder, int position) {
         holder.categoryName.setText(categoryData.get(position).getTitle());
         String picUrl = "";
         switch (position){
@@ -78,11 +78,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
         return categoryData.size();
     }
 
-    public class ViewHoler extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder{
             TextView categoryName;
             ImageView categoryPic;
             ConstraintLayout mainLayout;
-        public ViewHoler(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
             categoryName = itemView.findViewById(R.id.categoryName);
             categoryPic = itemView.findViewById(R.id.categoryPic);

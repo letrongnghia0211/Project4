@@ -11,7 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/background_intro"/>
+        android:src="@drawable/background_intro"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-70dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -39,13 +41,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/editPhone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#CCCCCC"
-        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawableLeft="@drawable/ic_baseline_contact_phone_24"
         android:drawablePadding="13dp"
-        android:text="@string/email_address"
+        android:hint="Phone"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:layout_marginTop="30dp"
@@ -54,35 +56,37 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintWidth_percent=".8"/>
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editPassWord"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:backgroundTint="#CCCCCC"
-        android:drawableLeft="@drawable/ic_baseline_password_24"
-        android:drawablePadding="13dp"
+        android:drawableRight="@drawable/ic_baseline_visibility_off_24"
+        android:paddingRight="10dp"
+        android:inputType="textPassword"
+        android:longClickable="false"
         android:hint="@string/pass_word"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText1"
+        app:layout_constraintTop_toBottomOf="@+id/editPhone"
         app:layout_constraintWidth_percent=".8" />
+
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/loginBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="14dp"
         android:text="Sign In"
         android:textAllCaps="false"
         android:textStyle="bold"
-        android:onClick="MainActivity"
+        android:background="#3300FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText1"
+        app:layout_constraintTop_toBottomOf="@+id/editPhone"
         app:layout_constraintVertical_bias=".7"
         app:layout_constraintWidth_percent=".8"
-
         app:layout_constraintHorizontal_bias="0.6"/>
     <TextView
         android:id="@+id/textView6"
@@ -95,8 +99,9 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"/>
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn"/>
     <TextView
+        android:id="@+id/textView_register"
         android:layout_width="70dp"
         android:layout_height="25dp"
         android:text="@string/register"
@@ -104,11 +109,10 @@
         android:textColor="@color/purple_500"
         android:textSize="18dp"
         android:textStyle="bold"
-
         app:layout_constraintBottom_toBottomOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintHorizontal_bias="0"
-        android:onClick="Register"/>
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
